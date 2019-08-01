@@ -137,6 +137,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/30/Html/">DVWA安装过程</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/30/Html/" class="archive-article-date">
+  	<time datetime="2019-07-30T06:09:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+
+<ol>
+<li>​    进入到/var/www目录下，wget下载dvwa文件，解压到html文件下，命名为dvwa，进入dvwa/config文件中将config.inc.php.dist重命名为config.inc.php，浏览器输入IP/dvwa验证。</li>
+</ol>
+<p>具体命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www</span><br><span class="line">wget https://github.com/ethicalhack3r/DVWA/archive/master.zip</span><br><span class="line">upzip master.zip -d html</span><br><span class="line">cd html</span><br><span class="line">mv DVWAA-master dvwa</span><br><span class="line">cd config</span><br><span class="line">cp config.inc.php.dist config.inc.php</span><br></pre></td></tr></table></figure>
+
+<p>​    2.接下来修改相关配置信息。</p>
+<p>具体命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd /etc</span><br><span class="line">vi php.ini  将allow_url_include=Off改为On</span><br><span class="line"></span><br><span class="line">cd /var/www/html/dvwa/config</span><br><span class="line">vi config.inc.php</span><br><span class="line">把$_DVWA[ ‘db_password ’ ] = ‘p@ssw0rd’修改为mysql中root用户的密码，</span><br><span class="line">填写公钥和私钥。</span><br><span class="line">public_key: 6LePqhAUAAAAAH6Bn2okO9-8G-zNw46PNhotV4Q6</span><br><span class="line">private_key: 6LePqhAUAAAAAMVqhBbFr1NVA9H13FkyfAgBeZYx</span><br></pre></td></tr></table></figure>
+
+<p>​    3.修改dvwa的用户和用户组权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/html</span><br><span class="line">chown -R apache:apache dvwa</span><br><span class="line">systemctl restart http</span><br></pre></td></tr></table></figure>
+
+<p>​    4.完成，默认用户名为admin，密码为password。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/30/Html/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-shh" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
