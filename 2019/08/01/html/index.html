@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://shh4757.github.io">
-  <title>phpMyAdmin4.8.x漏洞复现 | sleepyde1b</title>
+  <title>html+javascript+jquery+ajax | sleepyde1b</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
+  <meta name="description" content="Html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="phpMyAdmin4.8.x漏洞复现">
-<meta property="og:url" content="http://shh4757.github.io/2019/07/28/shh/index.html">
+<meta property="og:title" content="html+javascript+jquery+ajax">
+<meta property="og:url" content="http://shh4757.github.io/2019/08/01/html/index.html">
 <meta property="og:site_name" content="sleepyde1b">
-<meta property="og:description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
+<meta property="og:description" content="Html">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e19Dw8.md.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e1ER4f.md.png">
-<meta property="og:updated_time" content="2019-07-28T13:23:44.240Z">
+<meta property="og:updated_time" content="2019-08-01T13:11:27.672Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="phpMyAdmin4.8.x漏洞复现">
-<meta name="twitter:description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png">
+<meta name="twitter:title" content="html+javascript+jquery+ajax">
+<meta name="twitter:description" content="Html">
   
     <link rel="alternative" href="/atom.xml" title="sleepyde1b" type="application/atom+xml">
   
@@ -140,46 +136,94 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-shh" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-html" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      phpMyAdmin4.8.x漏洞复现
+      html+javascript+jquery+ajax
     </h1>
   
 
         
-        <a href="/2019/07/28/shh/" class="archive-article-date">
-  	<time datetime="2019-07-28T08:45:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
+        <a href="/2019/08/01/html/" class="archive-article-date">
+  	<time datetime="2019-08-01T05:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：</p>
-<a id="more"></a>
+        <h3 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h3><a id="more"></a>
 
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzIzMTc1MjExOQ==&mid=2247485036&idx=1&sn=8e9647906c5d94f72564dec5bc51a2ab&chksm=e89e2eb4dfe9a7a28bff2efebb5b2723782dab660acff074c3f18c9e7dca924abdf3da618fb4&mpshare=1&scene=1&srcid=0621gAv1FMtrgoahD01psMZr&pass_ticket=LqhRfckPxAVG2dF%2FjxV%2F9%2FcEb5pShRgewJe%2FttJn2gIlIyGF%2FbsgGmzcbsV%2BLmMK#rd" target="_blank" rel="noopener">phpmyadmin4.8.1后台getshell</a>。该漏洞利用不要求root帐号，只需能够登录 phpMyAdmin 便能够利用。</p>
-<h3 id="漏洞原理："><a href="#漏洞原理：" class="headerlink" title="漏洞原理："></a>漏洞原理：</h3><p>​       攻击者可以在服务器上包含（查看和潜在执行）文件的漏洞被发现。该漏洞来自一部分代码，其中页面在phpMyAdmin中被重定向和加载，以及对白名单页面进行不正确测试。</p>
-<h3 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h3><ol>
-<li><p>在LAMP环境下进入下载好的phpmyadmin4.8.1并登录，找到SQL栏，执行SQL查询</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`select &apos;&lt;?php phpinfo();exit;?&gt;&apos;`</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;标题&lt;/title&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;        			//编码格式</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;h&gt;标题&lt;/h&gt;</span><br><span class="line">	&lt;p&gt;段落&lt;/p&gt;</span><br><span class="line">	&lt;a href=&quot;http://www.baidu.com&quot;&gt;链接&lt;/a&gt;</span><br><span class="line">	&lt;img src=&quot;/images/logo.png&quot;&gt;  			//图像</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>在HTML页面中插入JavaScript需使用<script>标签。</p>
+<h5 id="HTML事件"><a href="#HTML事件" class="headerlink" title="HTML事件"></a>HTML事件</h5><p>HTML元素中可以添加事件属性，使用 JavaScript代码来添加HTML元素。</p>
+<h5 id="onclick事件"><a href="#onclick事件" class="headerlink" title="onclick事件"></a>onclick事件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onclick=&quot;displayDate()&quot;&gt;现在的时间是?&lt;/button&gt;</span><br><span class="line">											//设置一个按钮，点击执行displayDate()函数</span><br><span class="line">											</span><br><span class="line">&lt;button onclick=&quot;getElementById(&apos;demo&apos;).innerHTML=Date()&quot;&gt;现在的时间是？&lt;/button&gt;</span><br><span class="line">											//给按钮元素添加onclick(鼠标点击)属性</span><br><span class="line">											</span><br><span class="line">&lt;button onclick=&quot;this.innerHTML=Date()&quot;&gt;现在的时间是？&lt;/button&gt;</span><br><span class="line">											//点击按钮后将元素本身内容修改为当前时间</span><br></pre></td></tr></table></figure>
+
+<h5 id="常见的HTML事件"><a href="#常见的HTML事件" class="headerlink" title="常见的HTML事件"></a>常见的HTML事件</h5><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onchange</td>
+<td>HTML元素改变</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>用户点击HTML元素</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>用户在一个HTML元素上移动鼠标</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>用户按下键盘按键</td>
+</tr>
+<tr>
+<td>onload</td>
+<td>浏览器已完成页面的加载</td>
+</tr>
+</tbody></table>
+<h5 id="JavaScript-HTML-DOM"><a href="#JavaScript-HTML-DOM" class="headerlink" title="JavaScript HTML DOM"></a>JavaScript HTML DOM</h5><p>通过 HTML DOM，可访问 JavaScript HTML 文档的所有元素。</p>
+<p><img src="" alt="https://www.runoob.com/images/pic_htmltree.gif"></p>
+<h6 id="查找HTML元素"><a href="#查找HTML元素" class="headerlink" title="查找HTML元素"></a>查找HTML元素</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;&quot;)    		//通过标签名字获取元素</span><br><span class="line">document.getElementsByTagName(&quot;input&quot;).[0]  //查看第一个input标签的元素</span><br><span class="line"></span><br><span class="line">document.getElementById(&quot;&quot;)					//通过ID找到元素</span><br><span class="line">document.getElementById(&quot;uid&quot;).value		//获取ID=uid的value值</span><br><span class="line"></span><br><span class="line">doucument.getElementsByClassName(&quot;&quot;)		//通过类名找到元素</span><br></pre></td></tr></table></figure>
+
+<h6 id="改变HTML内容"><a href="#改变HTML内容" class="headerlink" title="改变HTML内容"></a>改变HTML内容</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(id).innerHtml=新的 HTML</span><br><span class="line"></span><br><span class="line">例：改变&lt;p&gt;元素的内容</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=&quot;p1&quot;&gt;Hello World!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">document.getElementById(&quot;p1&quot;).innerHTML=&quot;你好，世界!&quot;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h6 id="改变HTML属性"><a href="#改变HTML属性" class="headerlink" title="改变HTML属性"></a>改变HTML属性</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(id).attribute=新属性值</span><br><span class="line"></span><br><span class="line">例：修改img标签的srv属性</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;img id=&quot;image&quot; src=&quot;smiley.gif&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">document.getElementById(&quot;image&quot;).src=&quot;landscape.jpg&quot;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h6 id="JavaScript-HTML-DOM-事件"><a href="#JavaScript-HTML-DOM-事件" class="headerlink" title="JavaScript HTML DOM 事件"></a>JavaScript HTML DOM 事件</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;					 //当用户在&lt;h1&gt;元素上单击时，其内容从&quot;点击文本！&quot;变为&quot;Ooops!&quot;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1 onclick=&quot;this.innerHTML=&apos;Ooops!&apos;&quot;&gt;点击文本!&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h6 id="JavaScript-HTML-DOM-元素（节点）"><a href="#JavaScript-HTML-DOM-元素（节点）" class="headerlink" title="JavaScript HTML DOM 元素（节点）"></a>JavaScript HTML DOM 元素（节点）</h6><ul>
+<li>创建新的HTML元素(节点)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var parp= document.createElement(&quot;p&quot;);           //创建&lt;p&gt;元素</span><br><span class="line"></span><br><span class="line">var node =document.createTextNode(&quot;新段落&quot;);	   //为&lt;P&gt;元素船舰一个新的文本节点</span><br><span class="line"></span><br><span class="line">para.appendChild(node);							 //将文本节点添加到&lt;p&gt;元素中</span><br><span class="line"></span><br><span class="line">var element = document.getElementById(&quot;div1&quot;)</span><br><span class="line">element.appendChild(para);						 //在一个已存在的元素div1中添加&lt;P&gt;元素</span><br></pre></td></tr></table></figure>
+
+<p>​        以上用到的appendChild()方法是将新元素添加到尾部，如要添加到开始位置，使用insertBefore()方法。</p>
+<ul>
+<li><p>移除已存在的元素</p>
+<p>要移除一个元素，需要知道该元素的父元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;div1&quot;&gt;</span><br><span class="line">&lt;p id=&quot;p1&quot;&gt;这是一个段落。&lt;/p&gt;</span><br><span class="line">&lt;p id=&quot;p2&quot;&gt;这是另外一个段落。&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"> </span><br><span class="line">&lt;script&gt;</span><br><span class="line">var parent = document.getElementById(&quot;div1&quot;);	//查找id=&quot;div1&quot;的元素</span><br><span class="line">var child = document.getElementById(&quot;p1&quot;);		//查找p1元素	</span><br><span class="line">parent.removeChild(child);						//从父元素中移除子节点元素</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
 
 </li>
-</ol>
-<p><a href="https://imgchr.com/i/e1pNrV" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png" alt="e1pNrV.md.png"></a></p>
-<p>  2.进入开发者工具在Cookie中的phpmyadmin中获取自己的session id</p>
-<p><a href="https://imgchr.com/i/e19Dw8" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e19Dw8.md.png" alt="e19Dw8.md.png"></a></p>
-<p>   这样对应的SESSION文件为<code>/var/lib/php/sessions/sess_你的SESSION ID</code>。</p>
-<p>3.包含session文件，漏洞利用成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.31.222/phpmyadmin/server_sql.php?target=index.php%253f/../../../../../../../../var/lib/php/session/sess_39paiubi5fdps7321f91oadsv525usle</span><br></pre></td></tr></table></figure>
+</ul>
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><h5 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;tag&apos;)</span><br><span class="line">$(&apos;#id&apos;)</span><br><span class="line">$(&apos;.class&apos;)</span><br><span class="line">$(&apos;tag&apos;).hide() 							 //隐藏当前元素</span><br><span class="line">$(&apos;tag&apos;).show() 							 //显示</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://imgchr.com/i/e1ER4f" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e1ER4f.md.png" alt="e1ER4f.md.png"></a></p>
+<h5 id="请求网站"><a href="#请求网站" class="headerlink" title="请求网站"></a>请求网站</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.get(&quot;https://www.baidu.com/get&quot;);</span><br><span class="line"></span><br><span class="line">$.post(&quot;https://www.baidu.com/post&quot;,&#123;</span><br><span class="line">	name:百度</span><br><span class="line">	url:&quot;https://www.baidu.com&quot;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">      type: &apos;POST&apos;,</span><br><span class="line">      url: &apos;http://www.baidu.com/api/user/info&apos;,</span><br><span class="line">      dataType: &apos;json&apos;,</span><br><span class="line">      </span><br><span class="line">      data: &#123;</span><br><span class="line">        args: &quot;value&quot;,</span><br><span class="line">      &#125;,</span><br><span class="line">    </span><br><span class="line">      xhrFields: &#123;</span><br><span class="line">          withCredentials:true  			//支持附带详细信息,可以携带cookie</span><br><span class="line">      &#125;,</span><br><span class="line">      </span><br><span class="line">      crossDomain: true,					//请求偏向外域,支持跨域请求</span><br><span class="line">      success: function (data) &#123;</span><br><span class="line">          console.log(data);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">      type: &apos;GET&apos;,</span><br><span class="line">      url: &apos;http://www.baidu.com/s&apos;,</span><br><span class="line">      dataType: &apos;json&apos;,</span><br><span class="line">     </span><br><span class="line">     xhrFields: &#123;</span><br><span class="line">          withCredentials:true  			</span><br><span class="line">      &#125;,</span><br><span class="line">      crossDomain: true,					</span><br><span class="line">      success: function (data) &#123;</span><br><span class="line">          console.log(data);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+
+</script></p>
       
 
       
@@ -237,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://shh4757.github.io/2019/07/28/shh/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://shh4757.github.io/2019/08/01/html/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -251,18 +295,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/29/dvwa/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          DVWA安装过程
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/28/test/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Maps</div>
+    <a href="/2019/07/29/dvwa/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DVWA安装过程</div>
       <i class="icon-circle-right"></i>
     </a>
   

