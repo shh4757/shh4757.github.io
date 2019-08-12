@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://shh4757.github.io">
-  <title>Archives: 2019 | sleepyde1b</title>
+  <title>数据库 | sleepyde1b</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sleepyde1b">
-<meta property="og:url" content="http://shh4757.github.io/archives/2019/index.html">
+  <meta name="description" content="数据库相关知识和作业">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库">
+<meta property="og:url" content="http://shh4757.github.io/2019/08/13/mysql/index.html">
 <meta property="og:site_name" content="sleepyde1b">
-<meta property="og:description" content="记录学习">
+<meta property="og:description" content="数据库相关知识和作业">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/13/mphpH1.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/13/mphPN6.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/13/mphk9O.md.png">
+<meta property="og:updated_time" content="2019-08-12T16:47:42.933Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sleepyde1b">
-<meta name="twitter:description" content="记录学习">
+<meta name="twitter:title" content="数据库">
+<meta name="twitter:description" content="数据库相关知识和作业">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/08/13/mphpH1.md.png">
   
     <link rel="alternative" href="/atom.xml" title="sleepyde1b" type="application/atom+xml">
   
@@ -135,241 +140,161 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-mysql" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      数据库
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/13/mysql/" class="archive-article-date">
+
+        
+        <a href="/2019/08/13/mysql/" class="archive-article-date">
   	<time datetime="2019-08-12T16:21:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/13/mysql/">数据库</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数据库相关知识和作业</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>关系型数据库：mysql、sql server/mssql、sqlite、oracle、access、postgresql、dn2</p>
+<p>存数据方式: q  w  e  r   t   y</p>
+<hr>
+<p>非关系型数据库：mongodb、redis(一般做动态存取，做缓存服务器)</p>
+<p>存数据方式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&apos;name&apos;:&apos;zs&apos;,&apos;age&apos;:21,</span><br><span class="line">&apos;phone&apos;:&#123;</span><br><span class="line">	&apos;phone1&apos;:123412124,</span><br><span class="line">	&apos;phone2&apos;:124124124</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>linux中,默认情况下数据库存储路径是固定的/var/lib/mysql</p>
+<hr>
+<h5 id="数据存储操作"><a href="#数据存储操作" class="headerlink" title="数据存储操作"></a>数据存储操作</h5><p>mysqld                 进行存储操作</p>
+<p>mysql                   客户端只是发送执行</p>
+<p>access、sqlite      只有一个客户端，直接打开文件，进行读取操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p   			 从命令行连接数据库</span><br><span class="line">show tables from mysql       查询数据库mysql的所有表</span><br><span class="line">use test(数据库名字) 		  切换数据库</span><br></pre></td></tr></table></figure>
+
+<h5 id="数据库的导入和导出"><a href="#数据库的导入和导出" class="headerlink" title="数据库的导入和导出"></a>数据库的导入和导出</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">导入</span><br><span class="line">mysql -uroot -p test &lt; /文件地址/文件名</span><br><span class="line">source 文件路径</span><br><span class="line"></span><br><span class="line">导出</span><br><span class="line">mysqldump -uroot -p mysql &gt; /路径/导出数据文件名</span><br><span class="line">mysqldump -uroot -p -all -database &gt; /路径/导出数据文件名</span><br></pre></td></tr></table></figure>
+
+<h5 id="作业：通过information-schema查看数据库信息"><a href="#作业：通过information-schema查看数据库信息" class="headerlink" title="作业：通过information_schema查看数据库信息"></a>作业：通过information_schema查看数据库信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">首先通过一种数据库名查找其下的表名</span><br><span class="line">select TABLE_NAME from information_schema.tables where TABLE_SCHEMA=&quot;test&quot;;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/mphpH1" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/08/13/mphpH1.md.png" alt="mphpH1.md.png"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">通过表名在COLUMNS表中查询content表的信息</span><br><span class="line">select COLUMN_NAME from information_schema.COLUMNS where table_name = &apos;content&apos; and table_schema =&apos;test&apos;;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/mphPN6" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/08/13/mphPN6.md.png" alt="mphPN6.md.png"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">通过表名在COLUMNS表中查询users表的信息</span><br><span class="line">select COLUMN_NAME from information_schema.COLUMNS where table_name = &apos;users&apos; and table_schema =&apos;test&apos;;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/mphk9O" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/08/13/mphk9O.md.png" alt="mphk9O.md.png"></a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://shh4757.github.io/2019/08/13/mysql/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/11/php补充/" class="archive-article-date">
-  	<time datetime="2019-08-11T08:54:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/11/php补充/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP补充</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/11/php补充/">PHP补充</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/news/" class="archive-article-date">
-  	<time datetime="2019-08-08T16:31:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/news/">news</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/07/zuoye/" class="archive-article-date">
-  	<time datetime="2019-08-07T13:12:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/07/zuoye/">homework</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/php/" class="archive-article-date">
-  	<time datetime="2019-08-02T01:07:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/php/">php</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/01/html/" class="archive-article-date">
-  	<time datetime="2019-08-01T05:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/01/html/">Html+JavaScript+jQuery+Ajax</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/28/dvwa/" class="archive-article-date">
-  	<time datetime="2019-07-28T11:09:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/28/dvwa/">DVWA安装过程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/28/shh/" class="archive-article-date">
-  	<time datetime="2019-07-28T08:45:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/28/shh/">phpMyAdmin4.8.x漏洞复现</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -393,8 +318,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
